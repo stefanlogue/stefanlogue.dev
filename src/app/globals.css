@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .highlight__panel {
+        @apply hidden;
+    }
+    .prose img {
+        @apply mx-auto shadow-md rounded;
+    }
+    .prose figure, .prose figcaption {
+        @apply text-center italic;
+        margin-top: -1rem;
+    }
+    .prose figure {
+        @apply my-6;
+    }
+    .prose figure br {
+        @apply hidden;
+    }
+
+    .navigation-underline {
+        @apply w-full border border-gray-800 dark:border-yellow-300;
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+        .hide {
+            display: none;
+            visibility: hidden;
+        }
+
+        .show {
+            display: inline;
+            visibility: visible;
+        }
+    }
+}

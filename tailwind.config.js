@@ -5,14 +5,61 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme('colors.gray.300'),
+            a: {
+              color: theme('colors.white'),
+              '&:hover': {
+                color: theme('colors.white'),
+              },
+            },
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.gray.200'),
+            },
+            h4: {
+              color: theme('colors.gray.200'),
+            },
+            h5: {
+              color: theme('colors.gray.200'),
+            },
+            h6: {
+              color: theme('colors.gray.200'),
+            },
+            strong: {
+              color: theme('colors.gray.200'),
+            },
+            pre: {
+              backgroundColor: theme('colors.gray.900'),
+            },
+            code: {
+              color: theme('colors.white'),
+            },
+            figcaption: {
+              color: theme('colors.gray.300'),
+            },
+            blockquote: {
+              color: theme('colors.gray.300'),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  variants: {
+    typography: ["dark"],
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

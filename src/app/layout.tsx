@@ -1,20 +1,11 @@
+import HeaderComponent from '@/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'stefanlogue.dev',
   description: 'Welcome to my personal site',
-}
-
-const HeaderComponent = () => {
-  return (
-    <header className='bg-zinc-500 sticky top-0 z-50'>
-      <div className='flex flex-row justify-between px-5 py-4 max-w-5xl mx-auto'>
-        <p>Stefan Logue</p>
-        <p>menu</p>
-      </div>
-    </header>
-  )
 }
 
 export default function RootLayout({
@@ -24,9 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex flex-col min-h-screen'>
+      <body className='flex flex-col min-h-screen bg-white dark:bg-gray-800 transition-colors duration-150 ease-linear'>
         <HeaderComponent />
         {children}
+        <Footer />
       </body>
     </html>
   )

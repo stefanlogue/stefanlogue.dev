@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.4.8",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "framer-motion": "^10.15.1",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
@@ -23,8 +26,19 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "sst": "^2.23.3",
     "aws-cdk-lib": "2.84.0",
-    "constructs": "10.1.156"
+    "axios": "^1.4.0",
+    "constructs": "10.1.156",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.8.0",
+    "moment": "^2.29.4",
+    "react-icons": "^4.10.1",
+    "remark-gfm": "^1.0.0",
+    "remark-highlight.js": "^6.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "sst": "^2.23.3",
+    "strip-html-comments": "^1.0.0",
+    "unified": "^9.2.0"
   }
 }
