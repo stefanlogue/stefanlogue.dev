@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS token for deployment
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::806644765532:role/admin
+          role-to-assume: arn:aws:iam::806644765532:role/GithubDeploy
           aws-region: eu-west-2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOY_AWS_ACCESS_KEY_ID }}
