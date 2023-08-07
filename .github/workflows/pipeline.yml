@@ -25,6 +25,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::806644765532:role/GithubDeploy
-          aws-region: eu-west-2
+          aws-region: eu-west-1
       - name: deploy
         run: npx sst deploy --stage prod
