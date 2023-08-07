@@ -18,7 +18,7 @@ export default function Home() {
         </p>
         <p className="my-2">
           Outside of work I spend my time working on open source projects, checking out new
-          technologies, and an unholy amount of time configuring Neovim (it's almost perfect, I swear).
+          technologies, and an unholy amount of time configuring Neovim (it&apos;s almost perfect, I swear).
         </p>
       </Section>
     </PageWrapper>
