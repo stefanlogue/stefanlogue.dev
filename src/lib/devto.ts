@@ -24,7 +24,6 @@ export const convertCanonicalURLToRelative = (canonical: string): string => {
   return canonical.replace(blogURL, '')
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
 const convertDevtoResponseToArticle = (data: any): IArticle => {
   const slug = convertCanonicalURLToRelative(data.canonical_url)
   const markdown = sanitizeDevToMarkdown(data.body_markdown)
