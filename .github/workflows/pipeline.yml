@@ -21,10 +21,13 @@ jobs:
           node-version: 16.x
       - name: Install dependencies
         run: npm ci
-      - name: Configure AWS token for test account
+      - name: Configure AWS token for deployment
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::806644765532:role/admin
           aws-region: eu-west-2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOY_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOY_AWS_SECRET_ACCESS_KEY }}
       - name: deploy
-        run: npx sst deploy --stage test
+        run: npx sst deploy --stage prod
