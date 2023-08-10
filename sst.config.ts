@@ -18,6 +18,6 @@ export default {
       stack.addOutputs({
         SiteUrl: site.url,
       });
-    });
+    }, { stackName: `${app.name}-${app.stage}` });
   },
 } satisfies SSTConfig;
